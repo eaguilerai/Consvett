@@ -4,6 +4,6 @@
         <link rel="stylesheet" src="<?php BOOSTRAP_CSS ?>" />
     </head>
     <body>
-        require $
+        <?php require VIEWS_PATH . "/$content_model/$content_view.php" ?>
     </body>
 </html>
