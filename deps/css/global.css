@@ -1,0 +1,14 @@
+
+/* Name: global.css
+ * Description: Global styles for the entire application.
+ * Author: Erasmo Aguilera
+ * Creation date: October 08, 2014
+*/
+
+h1 {
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}

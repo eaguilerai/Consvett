@@ -22,7 +22,11 @@ class Site extends Controller
     // Index action method.
     public function index()
     {
-        $this->render_view("site", "index");
+        // Get the list of all sites.
+        //$all_sites = $this->all_sites();
+        $all_sites = null;
+        // Render the list of sites.
+        $this->render_view("site", "index", $all_sites);
     }
 
     // Action method that refreshes the state of all modems which have not
@@ -53,6 +57,12 @@ class Site extends Controller
     private function sites_repository()
     {
         return $this->m_sites_repository;
+    }
+    
+    // Returns a list with all sites.
+    private function all_sites()
+    {
+        return $this->sites_repository()->all_sites();
     }
 
     // Returns all sites whose modem has not reported today.

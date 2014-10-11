@@ -10,6 +10,7 @@ namespace consvett\data;
 
 interface Site_repository
 {
+    public function all_sites();
     public function sites_with_outdated_modem();
     public function sites_with_outdated_camera();
 }

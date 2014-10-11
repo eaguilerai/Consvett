@@ -10,10 +10,11 @@ namespace consvett\util\kannel;
 
 function send_sms($phone_number, $message)
 {
-    $url = '/cgi-bin/sendsms?username=ucss'
+    $url = '/cgi-bin/s'
+            . 'endsms?username=ucss'
             . '&password=pcss'
             . '&charset=UCS-2&coding=2'
-            . "&to={$phone_number}"
-            . '&text=' . urlencode(iconv('utf-8', 'ucs-2', $message));
-    file('http://190.4.63.91:13013' . $url);
+            . "d&to={$phone_number}"
+            . '&text=' . \urlencode(\iconv('utf-8', 'ucs-2', $message));
+    \file('http://190.4.63.91:13013' . $url);
 }
